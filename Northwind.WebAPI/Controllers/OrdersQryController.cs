@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class OrdersQryController : ApiBaseController<IOrdersQryService, OrdersQry, DtoOrdersQry>
     {
+        private readonly IOrdersQryService _ordersQryService;
         public OrdersQryController(IOrdersQryService ordersQryService) : base(ordersQryService)
         {
-
+            _ordersQryService = ordersQryService;
         }
     }
 }

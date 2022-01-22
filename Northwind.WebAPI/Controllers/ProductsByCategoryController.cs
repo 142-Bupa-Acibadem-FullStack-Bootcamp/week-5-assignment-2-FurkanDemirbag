@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class ProductsByCategoryController : ApiBaseController<IProductsByCategoryService, ProductsByCategory, DtoProductsByCategory>
     {
+        private readonly IProductsByCategoryService _productsByCategoryService;
         public ProductsByCategoryController(IProductsByCategoryService productsByCategoryService) : base(productsByCategoryService)
         {
-
+            _productsByCategoryService = productsByCategoryService;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class AlphabeticalListOfProductController : ApiBaseController<IAlphabeticalListOfProductService, AlphabeticalListOfProduct, DtoAlphabeticalListOfProduct>
     {
+        private readonly IAlphabeticalListOfProductService _alphabeticalListOfProductService;
         public AlphabeticalListOfProductController(IAlphabeticalListOfProductService alphabeticalListOfProductService) : base(alphabeticalListOfProductService)
         {
-
+            _alphabeticalListOfProductService = alphabeticalListOfProductService;
         }
     }
 }

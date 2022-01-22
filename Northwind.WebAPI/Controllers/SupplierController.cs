@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class SupplierController : ApiBaseController<ISupplierService, Supplier, DtoSupplier>
     {
+        private readonly ISupplierService _supplierService;
         public SupplierController(ISupplierService supplierService) : base(supplierService)
         {
-
+            _supplierService = supplierService;
         }
     }
 }

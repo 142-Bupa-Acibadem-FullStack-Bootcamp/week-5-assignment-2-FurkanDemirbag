@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class OrderSubtotalController : ApiBaseController<IOrderSubtotalService, OrderSubtotal, DtoOrderSubtotal>
     {
+        private readonly IOrderSubtotalService _orderSubtotalService;
         public OrderSubtotalController(IOrderSubtotalService orderSubtotalService) : base(orderSubtotalService)
         {
-
+            _orderSubtotalService = orderSubtotalService;
         }
     }
 }

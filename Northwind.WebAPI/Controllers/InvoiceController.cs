@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class InvoiceController : ApiBaseController<IInvoiceService, Invoice, DtoInvoice>
     {
+        private readonly IInvoiceService _invoiceService;
         public InvoiceController(IInvoiceService invoiceService) : base(invoiceService)
         {
-
+            _invoiceService = invoiceService;
         }
     }
 }

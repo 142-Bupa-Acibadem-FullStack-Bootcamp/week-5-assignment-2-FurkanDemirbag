@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class CustomerAndSuppliersByCityController : ApiBaseController<ICustomerAndSuppliersByCityService, CustomerAndSuppliersByCity, DtoCustomerAndSuppliersByCity>
     {
+        private readonly ICustomerAndSuppliersByCityService _customerAndSuppliersByCity;
         public CustomerAndSuppliersByCityController(ICustomerAndSuppliersByCityService customerAndSuppliersByCity) : base(customerAndSuppliersByCity)
         {
-
+            _customerAndSuppliersByCity = customerAndSuppliersByCity;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class ProductsAboveAveragePriceController : ApiBaseController<IProductsAboveAveragePriceService, ProductsAboveAveragePrice, DtoProductsAboveAveragePrice>
     {
+        private readonly IProductsAboveAveragePriceService _productsAboveAveragePriceService;
         public ProductsAboveAveragePriceController(IProductsAboveAveragePriceService productsAboveAveragePriceService) : base(productsAboveAveragePriceService)
         {
-
+            _productsAboveAveragePriceService = productsAboveAveragePriceService;
         }
     }
 }

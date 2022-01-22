@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class CurrentProductListController : ApiBaseController<ICurrentProductListService, CurrentProductList, DtoCurrentProductList>
     {
+        private readonly ICurrentProductListService _currentProductListService;
         public CurrentProductListController(ICurrentProductListService currentProductListService) : base(currentProductListService)
         {
-
+            _currentProductListService = currentProductListService;
         }
     }
 }

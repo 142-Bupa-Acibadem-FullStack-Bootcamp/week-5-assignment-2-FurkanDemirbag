@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class EmployeeController : ApiBaseController<IEmployeeService, Employee, DtoEmployee>
     {
+        private readonly IEmployeeService _employeeService;
         public EmployeeController(IEmployeeService employeeService) : base(employeeService)
         {
-
+            _employeeService = employeeService;
         }
     }
 }

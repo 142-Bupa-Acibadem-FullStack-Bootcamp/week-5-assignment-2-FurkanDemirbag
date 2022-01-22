@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class ProductSalesFor1997Controller : ApiBaseController<IProductSalesFor1997Service, ProductSalesFor1997, DtoProductSalesFor1997>
     {
+        private readonly IProductSalesFor1997Service _productSalesFor1997Service;
         public ProductSalesFor1997Controller(IProductSalesFor1997Service productSalesFor1997Service) : base(productSalesFor1997Service)
         {
-
+            _productSalesFor1997Service = productSalesFor1997Service;
         }
     }
 }

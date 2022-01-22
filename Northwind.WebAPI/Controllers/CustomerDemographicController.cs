@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class CustomerDemographicController : ApiBaseController<ICustomerDemographicService, CustomerDemographic, DtoCustomerDemographic>
     {
+        private readonly ICustomerDemographicService _customerDemographicService;
         public CustomerDemographicController(ICustomerDemographicService customerDemographicService) : base(customerDemographicService)
         {
-
+            _customerDemographicService = customerDemographicService;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class CategoryController : ApiBaseController<ICategoryService, Category, DtoCategory>
     {
+        private readonly ICategoryService _categoryService;
         public CategoryController(ICategoryService categoryService) : base(categoryService)
         {
-
+            _categoryService = categoryService;
         }
     }
 }

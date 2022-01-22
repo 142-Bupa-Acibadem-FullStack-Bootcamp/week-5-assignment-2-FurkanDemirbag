@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class EmployeeTerritoryController : ApiBaseController<IEmployeeTerritoryService, EmployeeTerritory, DtoEmployeeTerritory>
     {
+        private readonly IEmployeeTerritoryService _employeeTerritoryService;
         public EmployeeTerritoryController(IEmployeeTerritoryService employeeTerritoryService) : base(employeeTerritoryService)
         {
-
+            _employeeTerritoryService = employeeTerritoryService;
         }
     }
 }

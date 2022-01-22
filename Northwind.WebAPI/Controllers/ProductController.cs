@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class ProductController : ApiBaseController<IProductService, Product, DtoProduct>
     {
+        private readonly IProductService _productService;
         public ProductController(IProductService productService) : base(productService)
         {
-
+            _productService = productService;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class ShipperController : ApiBaseController<IShipperService, Shipper, DtoShipper>
     {
+        private readonly IShipperService _shipperService;
         public ShipperController(IShipperService shipperService) : base(shipperService)
         {
-
+            _shipperService = shipperService;
         }
     }
 }

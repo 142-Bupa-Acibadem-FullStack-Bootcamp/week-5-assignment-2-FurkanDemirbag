@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class SalesTotalsByAmountController : ApiBaseController<ISalesTotalsByAmountService, SalesTotalsByAmount, DtoSalesTotalsByAmount>
     {
+        private readonly ISalesTotalsByAmountService _salesTotalsByAmountService;
         public SalesTotalsByAmountController(ISalesTotalsByAmountService salesTotalsByAmountService) : base(salesTotalsByAmountService)
         {
-
+            _salesTotalsByAmountService = salesTotalsByAmountService;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class SummaryOfSalesByYearController : ApiBaseController<ISummaryOfSalesByYearService, SummaryOfSalesByYear, DtoSummaryOfSalesByYear>
     {
+        private readonly ISummaryOfSalesByYearService _summaryOfSalesByYearService;
         public SummaryOfSalesByYearController(ISummaryOfSalesByYearService summaryOfSalesByYearService) : base(summaryOfSalesByYearService)
         {
-
+            _summaryOfSalesByYearService = summaryOfSalesByYearService;
         }
     }
 }

@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class OrderDetailController : ApiBaseController<IOrderDetailService, OrderDetail, DtoOrderDetail>
     {
+        private readonly IOrderDetailService _orderDetailService;
         public OrderDetailController(IOrderDetailService orderDetailService) : base(orderDetailService)
         {
-
+            _orderDetailService = orderDetailService;
         }
     }
 }

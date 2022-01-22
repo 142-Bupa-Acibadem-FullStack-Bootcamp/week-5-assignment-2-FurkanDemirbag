@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class QuarterlyOrderController : ApiBaseController<IQuarterlyOrderService, QuarterlyOrder, DtoQuarterlyOrder>
     {
+        private readonly IQuarterlyOrderService _quarterlyOrderService;
         public QuarterlyOrderController(IQuarterlyOrderService quarterlyOrderService) : base(quarterlyOrderService)
         {
-
+            _quarterlyOrderService = quarterlyOrderService;
         }
     }
 }

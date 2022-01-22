@@ -16,9 +16,10 @@ namespace Northwind.WebAPI.Controllers
     [ApiController]
     public class RegionController : ApiBaseController<IRegionService, Region, DtoRegion>
     {
+        private readonly IRegionService _regionService;
         public RegionController(IRegionService regionService) : base(regionService)
         {
-
+            _regionService = regionService;
         }
     }
 }
